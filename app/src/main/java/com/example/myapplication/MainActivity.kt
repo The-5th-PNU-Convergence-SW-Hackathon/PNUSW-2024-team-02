@@ -36,31 +36,18 @@ class MainActivity : AppCompatActivity() {
         login_btn.setOnClickListener {
             val email = email_input.text.toString()
             val password = password_input.text.toString()
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_LONG).show()
-                return@setOnClickListener
-            }
             Log.i("Test Credentials", "Email : $email and Password : $password")
             signIn(email, password)
         }
         signup_btn.setOnClickListener {
             val email = email_input.text.toString()
             val password = password_input.text.toString()
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_LONG).show()
-                return@setOnClickListener
-            }
             Log.i("Test Credentials", "Email : $email and Password : $password")
             signUp(email, password)
         }
     }
 
     fun signUp(email: String, password: String) {
-        if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "정보를 모두 입력해주세요", Toast.LENGTH_LONG).show()
-            return
-        }
-
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -93,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                     task.result?.user?.let { goToMainActivity(it) }
                 } else {
                     // 로그인에 실패한 경우 Toast 메시지로 에러를 띄워준다
-                    Toast.makeText(this, "로그인 정보가 틀렸습니다.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
                 }
             }
     }
