@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:backgroundTint="@color/white"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".SignUp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="회원가입"
+                android:textSize="50dp"
+                android:textAppearance="@style/BoldTextStyle"
+                />
+
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="부산대 웹메일을 적어주세요"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                >
+
+                <EditText
+                    android:id="@+id/signup_email_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="@color/lightgray"
+                    android:hint="Email@pusan.ac.kr"
+                    android:inputType="textEmailAddress"
+                    android:padding="18dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/authentic_button"
+                    android:background="@drawable/right_rounded_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="-20dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="인증"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/password_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical" />
+
+                <ImageButton
+                    android:id="@+id/password_info_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="password"
+                    android:padding="16dp"
+                    android:src="@drawable/info_24px" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="18dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:backgroundTint="@color/lightgray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="비밀번호 확인"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/password_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/rounded_corner"
+                android:hint="Password Check"
+                android:inputType="textPassword"
+                android:padding="18dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:backgroundTint="@color/lightgray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/college_list_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:text="단과대학"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinner_colleges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border_layout"
+                android:padding="18dp"
+                android:backgroundTint="@color/lightgray"
+                />
+
+
+            <TextView
+                android:id="@+id/major_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="학과(부)/전공"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinner_departments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:background="@drawable/spinner_border_layout"
+                android:padding="18dp"
+                android:backgroundTint="@color/lightgray"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/nickname_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="닉네임"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/lightgray"
+                android:hint="nickname"
+                android:inputType="text"
+                android:padding="18dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/admin_code_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="(옵션) 관리자 인증코드"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/admin_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/lightgray"
+                android:hint="Admin Code"
+                android:inputType="text"
+                android:padding="18dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/signup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:padding="18dp"
+                android:backgroundTint="@color/pusanBlue"
+                android:text="회원가입"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

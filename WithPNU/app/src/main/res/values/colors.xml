@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pusanBlue">#FF2056AE</color>
+    <color name="pusanGreen">#FF00A650</color>
+    <color name="red">#FFFF3B30</color>
+    <color name="gray">#FF979797</color>
+    <color name="lightgray">#FFF5F5F5</color>
+</resources>

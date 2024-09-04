@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HomeButtonStyle">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">96dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+    </style>
+
+    <style name="BlackButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_corner</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="RegularTextStyle">
+        <item name="android:fontFamily">@font/pretendardregular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="BoldTextStyle">
+        <item name="android:fontFamily">@font/pretendardbold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CustomToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:elevation">4dp</item> <!-- 툴바 그림자 효과 -->
+        <item name="titleTextAppearance">@style/CustomToolbarTitleText</item> <!-- 타이틀 텍스트 스타일 -->
+    </style>
+
+    <!-- 커스텀 툴바 타이틀 텍스트 스타일 정의 -->
+    <style name="CustomToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">21sp</item> <!-- 타이틀 텍스트 크기 -->
+        <item name="android:fontFamily">@font/pretendardbold</item> <!-- BoldTextStyle 적용 -->
+        <item name="android:textColor">@color/black</item> <!-- 타이틀 텍스트 색상 -->
+    </style>
+
+</resources>

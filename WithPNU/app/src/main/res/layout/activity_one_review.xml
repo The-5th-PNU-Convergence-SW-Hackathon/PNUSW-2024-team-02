@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/go_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="total_review 페이지로 돌아가는 버튼"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/review_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="선택한 리뷰의 업체"
+                android:text="리뷰 업체"
+                android:textSize="32sp"
+                android:textAppearance="@style/BoldTextStyle"
+                android:layout_gravity="center"
+                android:layout_marginVertical="16dp" />
+
+            <RatingBar
+                android:id="@+id/review_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="사용자가 입력한 별점" />
+
+            <TextView
+                android:id="@+id/review_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="리뷰 내용"
+                android:text="리뷰 내용들......."
+                android:textSize="15sp"
+                android:layout_margin="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

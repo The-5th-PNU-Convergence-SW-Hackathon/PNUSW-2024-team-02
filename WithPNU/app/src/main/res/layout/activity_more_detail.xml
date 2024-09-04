@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/detail_photo"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:contentDescription="제휴 디테일 사진들" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메가박스 부산대점"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="@style/BoldTextStyle"
+                    android:textSize="28dp"
+                    android:layout_marginLeft="20dp"
+                    android:padding="10dp"
+                    android:contentDescription="제휴 업체 이름" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/partnership_store"
+                    android:textSize="15sp"
+                    android:text="제휴 업체명 : "
+                    android:layout_marginLeft="30dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/partnership_dateTodate"
+                    android:textSize="15sp"
+                    android:text="제휴 기간 : "
+                    android:layout_marginLeft="30dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/partnership_content"
+                    android:textSize="15sp"
+                    android:text="안녕하세요. 부산대학교"
+                    android:padding="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제휴업체장소"
+                    android:textAppearance="@style/BoldTextStyle"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="30dp" />
+
+                <com.google.android.gms.maps.MapView
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/detail_map"
+                    android:contentDescription="제휴업체장소 지도뷰"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="리뷰"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/BoldTextStyle"
+                        android:textSize="15sp"
+                        android:layout_marginLeft="30dp" />
+
+
+                    <TextView
+                        android:id="@+id/total_review_btn"
+                        android:contentDescription="리뷰 전체보기 버튼"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전체보기"
+                        android:textSize="15sp"
+                        android:padding="20dp"
+                        android:layout_marginLeft="250dp"
+                        android:textColor="@color/black" />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:id="@+id/starred_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.57"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/BoldTextStyle"
+                        android:textSize="20sp"
+                        android:contentDescription="평점 숫자" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:stepSize="0.5"
+                        android:numStars="5"
+                        android:isIndicator="true"
+                        style="@style/Widget.AppCompat.RatingBar.Indicator" />
+
+
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/review_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp"
+                    android:stretchMode="columnWidth"
+                    android:numColumns="auto_fit"
+                    android:gravity="center"
+                    android:padding="10dp" />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/write_review_btn"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/write_review"
+                android:background="@android:color/transparent"
+                android:contentDescription="리뷰쓰기 버튼"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

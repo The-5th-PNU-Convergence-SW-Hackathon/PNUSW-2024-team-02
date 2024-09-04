@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- 위치 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewMoreNotice"
+            android:exported="false" />
+        <activity
+            android:name=".TotalReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewMoreNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreEditNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoreEditPartnershipNotice"
+            android:exported="false" />
+        <activity
+            android:name=".ListNotice"
+            android:exported="false" />
+        <activity
+            android:name=".setting"
+            android:exported="false" />
+        <activity
+            android:name=".EditNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WriteMyReview"
+            android:exported="false" />
+        <activity
+            android:name=".ViewMyReview"
+            android:exported="false"
+            android:parentActivityName=".MainNavigationbar" />
+        <activity
+            android:name=".EditPartnershipNoticeActivity"
+            android:exported="false"
+            android:parentActivityName=".MainNavigationbar" />
+        <activity
+            android:name=".UploadNoticeActivity"
+            android:exported="false"
+            android:parentActivityName=".MainNavigationbar" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PartnershipNoticeActivity"
+            android:exported="false"
+            android:parentActivityName=".MainNavigationbar" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainNavigationbar"
+            android:exported="false" />
+        <activity
+            android:name=".DetailMoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangeMyinfoActivity"
+            android:exported="false"
+            android:parentActivityName=".MainNavigationbar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="seugeun.page.link"
+                    android:pathPrefix="/verify"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity> <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCqC4aLoGhe6_Mv8KbFyD6rARFq9OsZ5EE" />
+    </application>
+
+</manifest>

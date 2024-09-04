@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MypageFragment">
+
+    <!-- 모든 요소를 감싸는 전체 layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        style="@style/RegularTextStyle">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--전체를 감싸는 layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="16dp">
+
+                <!-- 이다음부터는 쭉 마이페이지 설정들 나열 -->
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="마이페이지"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/userInfoCardViewLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--개인정보 보여주는 카드뷰 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/userInfoCardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/lightgray"
+                        android:padding="30dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp">
+
+                        <!-- 카드뷰 요소 수평으로 늘어놓아 주는 layout-->
+                        <LinearLayout
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <!-- 사용자 프사 -->
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="user_profile_image"
+                                android:src="@drawable/baseline_person_24" />
+
+                            <!-- 사용자 텍스트 정보 수직으로 보여주는 layout -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="세론"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/userMajorInfo"
+                                    style="@style/RegularTextStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="정보컴퓨터공학대학 학생회" />
+
+                                <ImageView
+                                    android:id="@+id/student_tag_view"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/admin_tag" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/BoldTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="글 관리하기" />
+
+                    <TextView
+                        android:id="@+id/partnership_notice_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="제휴공지 작성하기" />
+
+                    <TextView
+                        android:id="@+id/edit_partnership_notice_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="제휴공지 관리하기" />
+
+
+
+                    <TextView
+                        android:id="@+id/upload_notice_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="공지사항 작성하기" />
+
+                    <TextView
+                        android:id="@+id/edit_notice_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="공지사항 관리하기" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        style="@style/BoldTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="이용안내" />
+
+                    <TextView
+                        android:id="@+id/settings_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="설정" />
+
+                    <TextView
+                        android:id="@+id/notice_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="공지사항" />
+
+                    <TextView
+                        android:id="@+id/report_issue_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="문의 / 버그 신고" />
+
+                    <TextView
+                        android:id="@+id/logout_btn"
+                        style="@style/RegularTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="로그아웃"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

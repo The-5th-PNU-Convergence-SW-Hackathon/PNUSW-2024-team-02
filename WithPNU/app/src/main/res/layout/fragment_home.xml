@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                style="@style/BoldTextStyle"
+                android:text="보고 싶은 제휴 카테고리를 선택해 주세요"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/gray"
+                style="@style/RegularTextStyle"
+                android:text="카테고리에 맞는 제휴업체를 소개시켜드릴게요"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/total_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:src="@drawable/totalview"
+                        android:contentDescription="전체보기버튼" />
+
+
+                    <ImageButton
+                        android:id="@+id/bar_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:src="@drawable/bar"
+                        android:contentDescription="술집버튼"/>
+
+                    <ImageButton
+                        android:id="@+id/cafe_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:src="@drawable/cafe"
+                        android:contentDescription="카페버튼" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/culture_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:src="@drawable/culture"
+                        android:contentDescription="문화버튼" />
+
+                    <ImageButton
+                        android:id="@+id/food_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:src="@drawable/food"
+                        android:contentDescription="음식점앤식품버튼" />
+
+                    <ImageButton
+                        android:id="@+id/healthAndBeauty_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:src="@drawable/health_and_beauty"
+                        android:contentDescription="헬스앤뷰티버튼" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageButton
+                        android:id="@+id/edu_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/edu"
+                        android:contentDescription="교육버튼" />
+
+                    <ImageButton
+                        android:id="@+id/medicalAndLaw_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:src="@drawable/medical_and_law"
+                        android:contentDescription="의료앤법버튼" />
+
+                    <!-- 간격 유지를 위해 만든 보이지 않는 빈 버튼 -->
+                    <ImageButton
+                        android:id="@+id/empty_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="빈버튼"
+                        android:padding="0dp"
+                        android:src="@drawable/totalview"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="새로 들어온 제휴업체예요"
+                    android:layout_marginLeft="16dp"
+                    style="@style/BoldTextStyle"
+                    android:textSize="21sp"
+                    android:textColor="@color/black"
+                    />
+
+
+                <androidx.constraintlayout.motion.widget.MotionLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center"
+                    android:elevation="8dp"
+                    app:layoutDescription="@xml/fragment_home_scene">
+
+                    <ImageView
+                        android:id="@+id/imageview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/skyeye" />
+                    <ImageView
+                        android:id="@+id/imageview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/megabox" />
+
+                    <ImageView
+                        android:id="@+id/imageview3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/os_fit"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <ImageView
+                        android:id="@+id/imageview4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/credit_burger" />
+
+                    <androidx.constraintlayout.helper.widget.Carousel
+                        android:id="@+id/carousel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:carousel_forwardTransition="@+id/forward"
+                        app:carousel_backwardTransition="@+id/backward"
+                        app:carousel_previousState="@+id/previous"
+                        app:carousel_nextState="@+id/next"
+                        app:carousel_infinite="true"
+                        app:carousel_firstView="@+id/imageview1"
+                        app:constraint_referenced_ids="imageview1,imageview2,imageview3,imageview4" />
+                </androidx.constraintlayout.motion.widget.MotionLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/BoldTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="공지사항"
+                        android:textColor="@color/black"
+                        android:textSize="21sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/view_total_notice_btn"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:textColor="transparent"-->
+                    <!--                        android:text="전체보기"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="380dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="32dp"
+                    android:contentDescription="DB 연결 후 나타나는 정보"
+                    tools:itemCount="3" />
+
+                <View
+                    android:layout_width="380dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

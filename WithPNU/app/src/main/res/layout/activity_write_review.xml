@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="평점 등록하기"
+                android:textColor="@color/black"
+                android:textAppearance="@style/BoldTextStyle"
+                android:paddingVertical="15dp"
+                android:textSize="21dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_location_pin_24"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="5dp"
+                android:text="선택한 제휴 업체"
+                android:layout_marginLeft="20dp"
+                style="@style/RegularTextStyle" />
+
+            <Button
+                android:id="@+id/addLocationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_input"
+                android:layout_margin="16dp"
+                android:drawableRight="@drawable/baseline_search_24"
+                style="@style/RegularTextStyle"
+                android:paddingEnd="16dp"
+                android:contentDescription="업체 등록하는 버튼"/>
+
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+                android:layout_marginTop="12dp"
+                android:isIndicator="false"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="0.5" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="리뷰 작성하기"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/black"
+                android:textAppearance="@style/BoldTextStyle"
+                android:paddingVertical="15dp"
+                android:textSize="21dp" />
+
+
+            <EditText
+                android:id="@+id/contentEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:paddingStart="16dp"
+                android:lines="5"
+                android:background="@drawable/gray_input"
+                android:hint="리뷰를 작성해 주세요"
+                android:inputType="textMultiLine"
+              />
+
+            <ImageButton
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/complete_btn"
+                android:padding="20dp"
+                android:background="@android:color/transparent"
+                android:layout_marginVertical="50dp"
+                android:contentDescription="작성 완료 버튼"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
