@@ -357,7 +357,7 @@ Gradle Sync: 프로젝트가 열리면, Android Studio는 자동으로 Gradle Sy
 
 ## 5. 소개 및 시연영상
 
-https://github.com/user-attachments/assets/4c345739-a33a-49bc-bbbb-91da6e5948d0
+[https://github.com/user-attachments/assets/4c345739-a33a-49bc-bbbb-91da6e5948d0](https://youtu.be/2g-vNY3k8fw)
 
 
 <br/>
